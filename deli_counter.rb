@@ -8,7 +8,8 @@ def line(katz_deli)
   else
     line = "The line is currently:"
     katz_deli.each do |person|
-      line << " " + katz_deli.index(person)+1 + ". " + person
+      person_in_line = " #{katz_deli.index(person)+1}. #{person}"
+      line << person_in_line
     end
     puts line
   end
