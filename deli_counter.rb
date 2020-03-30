@@ -6,7 +6,11 @@ def line(katz_deli)
   if katz_deli.length < 1
     puts "The line is currently empty."
   else
-    print "The line is currently: #{katz_deli}"
+    line = "The line is currently:"
+    katz_deli.each do |person|
+      line << " " + katz_deli.index(person) + ". " + person
+    end
+    puts line
   end
 end
 
